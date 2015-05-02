@@ -47,7 +47,8 @@ class LinkedinController < ApplicationController
 
   def get_client
     linkedin_oauth_setting = LinkedinOauthSetting.find_by_user_id(current_user.id)
-    client = LinkedIn::Client.new('ENV(LINKED_IN_CLIENT_ID)', 'ENV(LINKED_IN_CLIENT_SECRET)', @@config)
+    # client = LinkedIn::Client.new('ENV(LINKED_IN_CLIENT_ID)', 'ENV(LINKED_IN_CLIENT_SECRET)', @@config)
+    client = LinkedIn::Client.new('756b6pa1bg7g64', 'Dv76ExYs4ErpLP1V', @@config)
     client.authorize_from_access(linkedin_oauth_setting.atoken, linkedin_oauth_setting.asecret)
     client
   end

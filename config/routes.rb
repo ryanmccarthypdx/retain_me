@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resources :users, only: :show
 
 
-  get '/auth/linkedin/callbacks', :to "linkedin#oauth"
+  get '/auth/linkedin/callbacks', :to => "linkedin#oauth"
 
 end
