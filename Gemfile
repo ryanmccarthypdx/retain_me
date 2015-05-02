@@ -16,7 +16,11 @@ gem 'rails_admin'
 gem 'puma'
 gem 'rails_12factor'
 gem 'cancan'
+<<<<<<< HEAD
 gem 'dotenv'
+=======
+gem 'linkedin'
+>>>>>>> 7dc5f4c91c86accf28dbdbcd9bdebdaa1dfe6167
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
