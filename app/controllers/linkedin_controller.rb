@@ -1,0 +1,2 @@
+class LinkedinController < ApplicationController
+end
