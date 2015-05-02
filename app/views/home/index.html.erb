@@ -1,4 +1,284 @@
-<h1>Splash</h1>
 
-<li><%= link_to "Sign Up", new_user_registration_path %></li>
-<li><%= link_to "Login", new_user_session_path %></li>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="compatible"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>upmobility.co</title>
+    <meta name="description" content="">
+    <meta property="og:image" content="https://www.filepicker.io/api/file/kdwzChDHTS8zJC4AO856" />
+    <meta property="og:url" content="http://www.upmobility.co" />
+    <meta property="og:title" content="upmobility.co" />
+    <meta property="og:description" content="" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:site" content="@upmobilityco" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='//fonts.googleapis.com/css?family=Lato:400,700,400italic|Playfair+Display:400,700,400italic|Great+Vibes|Open+Sans:400italic,700italic,700,400|Oswald|Old+Standard+TT:400,700,400italic|Quattrocento:700,400|Sansita+One|Bevan|Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="//pop-profiles.s3.amazonaws.com/builds/1429132067438/clean-slate/css/styles.min.css" />
+    <style type="text/css">
+    body {
+      color: #6a737f;
+      background: #1a1c1a url("https://s3.amazonaws.com/popco/services/profile-v2/img/stock-bgs/bg_image11.jpg") no-repeat 50% 50%;
+      -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+    }
+    h2 { #6a737f; }
+    .main-content p { color: #6a737f; }
+    .main-content a { color: #6a737f; text-decoration:underline; }
+    ul.social-connections li a { color: #6a737f; }
+
+    .container .full-content-wrapper { padding: 0; }
+    .full-content-wrapper .bg-color { opacity: 0; background-color: #000000; }
+    @media only screen and (max-width: 1019px) {
+      .container .full-content-wrapper { padding: 0; }
+    }
+
+    @media only screen and (max-width: 719px) {
+        .container .full-content-wrapper { padding: 0; }
+    }
+
+    @media only screen and (max-width: 419px) {
+        .container .full-content-wrapper { padding: 0; }
+    }
+    h1 { color: #26a3a9; }
+    #map { border-color: #26a3a9; }
+    #toggleForm { color: #26a3a9; border-color: #26a3a9; }
+    .main-content button, button { background-color: #26a3a9; }
+    .main-content input, .main-content textarea { background-color: #fff; color: rgb(101, 131, 133); }
+    input::-webkit-input-placeholder { color: rgb(101, 131, 133); }
+    input:-moz-placeholder { color: rgb(101, 131, 133); }
+    textarea::-webkit-input-placeholder { color: rgb(101, 131, 133); }
+    textarea:-moz-placeholder { color: rgb(101, 131, 133); }
+
+.font-bundle-lato h1 {
+  font-family: 'Lato', sans-serif !important;
+  font-weight: 300 !important;
+}
+.font-bundle-lato,
+.font-bundle-lato .main-content input,
+.font-bundle-lato .main-content textarea,
+.font-bundle-lato h2,
+.font-bundle-lato h3,
+.font-bundle-lato h4,
+.font-bundle-lato h5,
+.font-bundle-lato h6,
+.font-bundle-lato div.content,
+.font-bundle-lato .main-content button,
+.font-bundle-lato #toggleForm,
+.font-bundle-lato p,
+.font-bundle-lato p > span {
+  font-family: 'Open Sans', sans-serif !important;
+}
+.font-bundle-monstserrat h1 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400 !important;
+}
+.font-bundle-monstserrat,
+.font-bundle-monstserrat .main-content input,
+.font-bundle-monstserrat .main-content textarea,
+.font-bundle-monstserrat h2,
+.font-bundle-monstserrat h3,
+.font-bundle-monstserrat h4,
+.font-bundle-monstserrat h5,
+.font-bundle-monstserrat h6,
+.font-bundle-monstserrat div.content,
+.font-bundle-monstserrat .main-content button,
+.font-bundle-monstserrat #toggleForm,
+.font-bundle-monstserrat p,
+.font-bundle-monstserrat p > span {
+  font-family: 'Open Sans', sans-serif !important;
+}
+.font-bundle-playfair h1 {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 400 !important;
+}
+.font-bundle-playfair,
+.font-bundle-playfair .main-content input,
+.font-bundle-playfair .main-content textarea,
+.font-bundle-playfair h2,
+.font-bundle-playfair h3,
+.font-bundle-playfair h4,
+.font-bundle-playfair h5,
+.font-bundle-playfair h6,
+.font-bundle-playfair div.content,
+.font-bundle-playfair .main-content button,
+.font-bundle-playfair #toggleForm,
+.font-bundle-playfair p,
+.font-bundle-playfair p > span {
+  font-family: 'Lato', sans-serif !important;
+}
+.font-bundle-bevan h1 {
+  font-family: 'Bevan', cursive !important;
+  font-weight: 400 !important;
+}
+.font-bundle-bevan,
+.font-bundle-bevan .main-content input,
+.font-bundle-bevan .main-content textarea,
+.font-bundle-bevan h2,
+.font-bundle-bevan h3,
+.font-bundle-bevan h4,
+.font-bundle-bevan h5,
+.font-bundle-bevan h6,
+.font-bundle-bevan div.content,
+.font-bundle-bevan .main-content button,
+.font-bundle-bevan #toggleForm,
+.font-bundle-bevan p,
+.font-bundle-bevan p > span {
+  font-family: 'Quattrocento', serif !important;
+}
+.font-bundle-oswald h1 {
+  font-family: 'Oswald', cursive !important;
+  font-weight: 400 !important;
+}
+.font-bundle-oswald,
+.font-bundle-oswald .main-content input,
+.font-bundle-oswald .main-content textarea,
+.font-bundle-oswald h2,
+.font-bundle-oswald h3,
+.font-bundle-oswald h4,
+.font-bundle-oswald h5,
+.font-bundle-oswald h6,
+.font-bundle-oswald div.content,
+.font-bundle-oswald .main-content button,
+.font-bundle-oswald #toggleForm,
+.font-bundle-oswald p,
+.font-bundle-oswald p > span {
+  font-family: 'Open Sans', sans-serif !important;
+}
+.font-bundle-sansita h1 {
+  font-family: 'Sansita One', cursive !important;
+  font-weight: 400 !important;
+}
+.font-bundle-sansita,
+.font-bundle-sansita .main-content input,
+.font-bundle-sansita .main-content textarea,
+.font-bundle-sansita h2,
+.font-bundle-sansita h3,
+.font-bundle-sansita h4,
+.font-bundle-sansita h5,
+.font-bundle-sansita h6,
+.font-bundle-sansita div.content,
+.font-bundle-sansita .main-content button,
+.font-bundle-sansita #toggleForm,
+.font-bundle-sansita p,
+.font-bundle-sansita p > span {
+  font-family: 'Old Standard TT', serif !important;
+}
+.font-bundle-old-standard h1 {
+  font-family: 'Old Standard TT', serif !important;
+  font-weight: 400 !important;
+}
+.font-bundle-old-standard,
+.font-bundle-old-standard .main-content input,
+.font-bundle-old-standard .main-content textarea,
+.font-bundle-old-standard h2,
+.font-bundle-old-standard h3,
+.font-bundle-old-standard h4,
+.font-bundle-old-standard h5,
+.font-bundle-old-standard h6,
+.font-bundle-old-standard div.content,
+.font-bundle-old-standard .main-content button,
+.font-bundle-old-standard #toggleForm,
+.font-bundle-old-standard p,
+.font-bundle-old-standard p > span {
+  font-family: 'Quattrocento', serif !important;
+}
+.font-bundle-great-vibes h1 {
+  font-family: 'Great Vibes', cursive !important;
+  font-weight: 400 !important;
+}
+.font-bundle-great-vibes,
+.font-bundle-great-vibes .main-content input,
+.font-bundle-great-vibes .main-content textarea,
+.font-bundle-great-vibes h2,
+.font-bundle-great-vibes h3,
+.font-bundle-great-vibes h4,
+.font-bundle-great-vibes h5,
+.font-bundle-great-vibes h6,
+.font-bundle-great-vibes div.content,
+.font-bundle-great-vibes .main-content button,
+.font-bundle-great-vibes #toggleForm,
+.font-bundle-great-vibes p,
+.font-bundle-great-vibes p > span {
+  font-family: 'Open Sans', sans-serif !important;
+}
+    </style>
+</head>
+<body class="font-bundle-oswald xpos-center ypos-top">
+    <!--[if lt IE 7]>
+    <p class="browsehappy">
+    You are using an <strong>outdated</strong> browser. Please
+    <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+    your experience.
+    </p>
+    <![endif]-->
+
+    <div class="container">
+        <div class="full-content-wrapper">
+            <div class="content-wrapper">
+                <header class="main-header">
+                  <div class="header-content">
+                    <img class="logo" src="https://www.filepicker.io/api/file/kdwzChDHTS8zJC4AO856" alt="upmobility.co" />
+                    <h1>upmobility.co</h1>
+                    <h2>Helping companies retain their diverse workforce &amp; empowering women to own their career development and advancement.</h2>
+                  </div>
+                </header>
+
+                <section class="main-content">
+                    <div class="content contact-us">
+                      <%= form_for Contact.new do |f| %>
+                        <p style="color: green"><%= flash[:notice] %></p>
+                        <%= f.text_field :email, maxlength: 64, size: 64, required: true, placeholder: 'Email Address' %>
+                        <%= f.button "Tell me More!" %>
+                      <% end %>
+                    </div>
+                </section>
+            </div>
+            <div class="bg-color"></div>
+        </div>
+    </div>
+
+	    <footer>
+        <ul class="social-connections">
+          <li>
+            <a href="http://twitter.com/upmobilityco" title="Follow us on Twitter" class="symbol">circletwitterbird</a>
+          </li>
+          <li>
+            <a href="https://facebook.com/upmobility" title="Like us on Facebook" class="symbol">circlefacebook</a>
+          </li>
+        </ul>
+      </footer>
+
+        <div id="popup">
+        <div class="bg-container">
+            <a href="#" class="close" title="Close">&times;</a>
+            <div class="content">
+                <header>
+                </header>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+<%= link_to "Sign Up", new_user_registration_path %>
+<%= link_to "Login", new_user_session_path %>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript">
+    var StarterPage = StarterPage || {};
+    StarterPage.settings = {
+        application_url: 'http://profile-api.pop.co',
+        domain: 'upmobility.co',
+        show_map: false,
+        show_contact_form: true,
+        coords: ""    };
+    </script>
+    <script type="text/javascript" src="//pop-profiles.s3.amazonaws.com/builds/1429132067438/clean-slate/js/script.min.js"></script>
+
+    </body>
+</html>
+
