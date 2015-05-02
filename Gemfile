@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.2.1'
 
 gem 'rails', '4.2.1'
 gem 'sass-rails', '~> 5.0'
@@ -12,6 +13,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'pg'
 gem 'rails_admin'
+gem 'puma'
+gem 'rails_12factor'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
