@@ -1,15 +1,28 @@
 <h1>About Me</h1>
 
 <%= form_for current_user.basic_profile, url: step_2_save_path do |f| %>
-  <%=  f.label :passion %>
-  <%= f.text_area :passion %>
-  <%=  f.label :want_to_try %>
-  <%= f.text_area :want_to_try %>
-  <%=  f.label :perfect_weekend %>
-  <%= f.text_area :perfect_weekend %>
-  <%=  f.label :strengths %>
-  <%= f.text_area :strengths %>
-  <%=  f.label :next_year_goals %>
-  <%= f.text_area :next_year_goals %>
-  <%= f.submit "Finish your profile!" %>
+  <div class="form-group">
+  <%=  f.label "What's your passion?" %>
+  <%= f.text_area :passion, class: 'form-control', size: '80x4' %>
+  </div>
+  <div class="form-group">
+  <%=  f.label "What have you always wanted to try?" %>
+  <%= f.text_area :want_to_try, class: 'form-control', size: '80x4' %>
+  </div>
+  <div class="form-group">
+  <%=  f.label "My idea of a perfect weekend is..." %>
+  <%= f.text_area :perfect_weekend, class: 'form-control', size: '80x4' %>
+  </div>
+  <div class="form-group">
+  <%=  f.label "My personal / professional strengths are..." %>
+  <%= f.text_area :strengths, class: 'form-control', size: '80x4' %>
+  </div>
+  <div class="form-group">
+  <%=  f.label "In the next year, I hope to..." %>
+  <%= f.text_area :next_year_goals, class: 'form-control', size: '80x4' %>
+  </div>
+
+  <div class="pull-right">
+    <%= f.submit "Finish your profile!" %>
+  </div>
 <% end %>

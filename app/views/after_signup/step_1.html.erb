@@ -1,7 +1,11 @@
 <h1>My Professional Objectives</h1>
 
 <%= form_for current_user.basic_profile, url: step_1_save_path do |f| %>
-  <%= f.label :professional_brand_statement %>
-  <%= f.text_area :professional_brand_statement %>
-  <%= f.submit "Continue to step 2" %>
+  <div class="form-group">
+    <%= f.label :professional_brand_statement %>
+    <%= f.text_area :professional_brand_statement, class: 'form-control', size: '80x8' %>
+  </div>
+  <div class="pull-right">
+    <%= f.submit "Continue to step 2" %>
+  </div>
 <% end %>
