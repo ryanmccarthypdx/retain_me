@@ -18,6 +18,7 @@ gem 'cancancan'
 gem 'dotenv'
 gem 'linkedin'
 gem 'bcrypt', '~> 3.1.7'
+gem 'wicked'
 
 group :development, :test do
   gem 'byebug'
