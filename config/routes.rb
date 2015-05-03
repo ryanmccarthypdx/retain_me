@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'feed/index', as: 'feed'
+  resources :news, only: [:create, :destroy]
+  get 'feed' => 'feed#index'
   get 'after_signup/step_0', as: 'step_0'
   get 'after_signup/step_1', as: 'step_1'
   patch 'after_signup/step_1_save', as: 'step_1_save'

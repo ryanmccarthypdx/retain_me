@@ -1,5 +1,33 @@
 <h1>News Feed</h1>
 
-<%# create a new post %>
+<div class="panel panel-default">
+  <%= form_for News.new do |f| %>
+    <div class="panel-body">
+      <%= f.text_area :content, size: '80x4', required: true, placeholder: "What's on your mind?" %>
+    </div>
+    <div class="panel-footer">
+      <%= f.submit 'Post' %>
+    </div>
+  <% end %>
+</div>
 
-<%# show the latest posts %>
+<div class="newsfeed container">
+<% @news.each do |news| %>
+  <div class="row panel panel-default">
+    <div class="col-md-2">
+      <h3><%= news.user.basic_profile.formatted_name %></h3>
+      <%= image_tag news.user.basic_profile.picture_url, size: '80x80', alt: 'pic', class: 'img-thumbnail' %>
+    </div>
+    <div class="col-md-9">
+      <p><%= news.content %></p>
+      <p><%= distance_of_time_in_words news.created_at, Time.now %> ago</p>
+    </div>
+    <div class="col-md-1">
+      <% if current_user.id == news.user_id %>
+        <%= form_for(news, method: :delete, remote: true) do |f| %>
+          <button type="submit" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
