@@ -15,7 +15,7 @@
       </p>
     </div>
 
-    <div class="col-md-7">
+    <div class="col-md-5">
       <h3>Professional</h3>
       <p><%= @user.basic_profile.professional_brand_statement %></p>
       <h3>Personal</h3>
@@ -31,6 +31,24 @@
         <p><strong>My strengths are...</strong><p>
         <p><%= @user.basic_profile.strengths %></p>
       <% end %>
+    </div>
+
+    <div class="col-md-2">
+      <h3> I'm looking...  </h3>
+      <form>
+        <div class="form-group">
+          <%= check_box_tag 'project', '1', true %> for a project.
+        </div>
+        <div class="form-group">
+          <%= check_box_tag 'job' %> for a job.
+        </div>
+        <div class="form-group">
+          <%= check_box_tag 'mentor', '1', true %> for a mentor.
+        </div>
+        <div class="form-group">
+          <%= check_box_tag 'be-mentor' %> to be a mentor.
+        </div>
+      </form>
     </div>
   </div>
 </div>
