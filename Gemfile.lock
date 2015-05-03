@@ -227,6 +227,7 @@ DEPENDENCIES
   dotenv
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   linkedin
   pg
   pry

@@ -75,6 +75,13 @@ ActiveRecord::Schema.define(version: 20150503172140) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "news", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.text     "content",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "positions", force: :cascade do |t|
     t.string   "title"
     t.string   "summary"
