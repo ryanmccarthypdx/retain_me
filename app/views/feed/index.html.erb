@@ -1,5 +1,17 @@
 <h1>News Feed</h1>
 
 <%# create a new post %>
+<%= form_for News.new do |f| %>
+  <%= f.text_area :content, size: '80x4', required: true, placeholder: 'What did you do recently?' %>
+  <%= f.submit 'Post' %>
+<% end %>
 
-<%# show the latest posts %>
+<% @news.each do |news| %>
+  <hr/>
+  <div class="newsitem">
+    <div><%= news.user.email %></div>
+    <div><%= image_tag 'http://placebear.com/100/100', size: '100x100', alt: 'pic' %></div>
+    <div><%= news.content %></div>
+    <div><%= form_for news, method: :delete do |f| %><%= f.submit 'X' %><% end %></div>
+  </div>
+<% end %>

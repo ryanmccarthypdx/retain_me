@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :news
   has_one :basic_profile
   has_one :full_profile
   has_one :linkedin_oauth_setting
