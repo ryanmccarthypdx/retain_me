@@ -218,6 +218,9 @@
                         <%= f.button "Tell me More!" %>
                       <% end %>
                     </div>
+                    <div class="">
+
+                    </div>
                 </section>
             </div>
             <div class="bg-color"></div>
@@ -245,6 +248,13 @@
         </div>
         <div class="overlay"></div>
     </div>
+
+    <% if current_user %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Sign Up", new_user_registration_path %>
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript">
