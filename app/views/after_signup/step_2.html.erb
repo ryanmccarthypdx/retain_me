@@ -1,7 +1,15 @@
 <h1>About Me</h1>
 
-<p>
-  My personal bio
-</p>
-
-<h3><%= link_to "Done", save_profile_path %></h3>
+<%= form_for current_user.basic_profile, url: step_2_save_path do |f| %>
+  <%=  f.label :passion %>
+  <%= f.text_area :passion %>
+  <%=  f.label :want_to_try %>
+  <%= f.text_area :want_to_try %>
+  <%=  f.label :perfect_weekend %>
+  <%= f.text_area :perfect_weekend %>
+  <%=  f.label :strengths %>
+  <%= f.text_area :strengths %>
+  <%=  f.label :next_year_goals %>
+  <%= f.text_area :next_year_goals %>
+  <%= f.submit "Finish your profile!" %>
+<% end %>
