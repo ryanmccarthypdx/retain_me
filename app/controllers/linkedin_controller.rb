@@ -22,6 +22,7 @@ class LinkedinController < ApplicationController
   end
 
   def oauth_account
+    
     client = LinkedIn::Client.new(ENV['LINKED_IN_CLIENT_ID'], ENV['LINKED_IN_CLIENT_SECRET'], @@config)
     pin = params[:oauth_verifier]
     if pin
@@ -34,7 +35,7 @@ class LinkedinController < ApplicationController
   def generate_linkedin_oauth_url
     if LinkedinOauthSetting.find_by_user_id(current_user.id).nil?
       client = LinkedIn::Client.new(ENV['LINKED_IN_CLIENT_ID'], ENV['LINKED_IN_CLIENT_SECRET'], @@config)
-      request_token = client.request_token(:oauth_callback => "http://#{request.host}:#{request.port}/linkedin/auth/callback")
+      request_token = client.request_token(:oauth_callback => "http://#{request.host}:#{request.port}/oauth_callback")
       session[:rtoken] = request_token.token
       session[:rsecret] = request_token.secret
       redirect_to request_token.authorize_url
