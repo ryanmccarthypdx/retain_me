@@ -1,7 +1,16 @@
 <h1>About Me</h1>
 
-<p>
-  My personal bio
-</p>
+<%= form_for @user_basic_profile do |f| %>
+  <%=  f.label :passion %>
+  <%= f.text_field :passion, class: 'form-control', required: true, %>
+  <%=  f.label :want_to_try %>
+  <%= f.text_field :want_to_try, class: 'form-control', required: true, %>
+  <%=  f.label :perfect_weekend %>
+  <%= f.text_field :perfect_weekend, class: 'form-control', required: true, %>
+  <%=  f.label :strengths %>
+  <%= f.text_field :strengths, class: 'form-control', required: true, %>
+  <%=  f.label :next_year_goals %>
+  <%= f.text_field :next_year_goals, class: 'form-control', required: true, %>
+<% end %>
 
 <h3><%= link_to "Done", save_profile_path %></h3>
