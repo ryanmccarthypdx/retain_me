@@ -12,7 +12,7 @@ class LinkedinController < ApplicationController
     if LinkedinOauthSetting.find_by_user_id(current_user.id)
       redirect_to "/feed"
     else
-      redirect_to "/after_signup/step_0"
+      redirect_to step_0_path
     end
   end
 
@@ -30,6 +30,7 @@ class LinkedinController < ApplicationController
       atoken, asecret = client.authorize_from_request(session[:rtoken], session[:rsecret], pin)
       LinkedinOauthSetting.create!(:asecret => asecret, :atoken => atoken, :user_id => current_user.id)
     end
+    get_basic_profile #very important
     redirect_to step_1_path
   end
 

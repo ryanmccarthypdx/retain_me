@@ -8,6 +8,7 @@ class AfterSignupController < ApplicationController
 
   def step_1
     @user_basic_profile = current_user.basic_profile
+    binding.pry
     render 'step_1'
   end
 
