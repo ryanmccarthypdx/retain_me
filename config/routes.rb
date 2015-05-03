@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
   devise_for :users, path_names: { sign_in: "login", sign_out: "logout" }
   resources :users, only: :show
+  resources :after_signup
 
   get '/linkedin' => 'linkedin#index'
   get '/linkedin_profile' => 'linkedin#linkedin_profile'
