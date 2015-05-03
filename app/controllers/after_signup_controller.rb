@@ -1,14 +1,17 @@
 class AfterSignupController < ApplicationController
-  include Wicked::Wizard
+  before_filter :authenticate_user!
 
-  steps :step_1, :step_2
+  def step_0
+  end
 
-  def show
-    @user = current_user
-    case step
-    when :step_2
-      @profile = @user.find_profile
-    end
-    render_wizard
+  def step_1
+  end
+
+  def step_2
+  end
+
+  def save
+    # save form details
+    redirect_to feed_path
   end
 end

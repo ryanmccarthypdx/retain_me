@@ -22,14 +22,14 @@ class LinkedinController < ApplicationController
   end
 
   def oauth_account
-    
+
     client = LinkedIn::Client.new(ENV['LINKED_IN_CLIENT_ID'], ENV['LINKED_IN_CLIENT_SECRET'], @@config)
     pin = params[:oauth_verifier]
     if pin
       atoken, asecret = client.authorize_from_request(session[:rtoken], session[:rsecret], pin)
       LinkedinOauthSetting.create!(:asecret => asecret, :atoken => atoken, :user_id => current_user.id)
     end
-    redirect_to root_path
+    redirect_to step_1_path
   end
 
   def generate_linkedin_oauth_url

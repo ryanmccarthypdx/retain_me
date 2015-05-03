@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  get 'feed/index', as: 'feed'
+  get 'after_signup/step_0', as: 'step_0'
+  get 'after_signup/step_1', as: 'step_1'
+  get 'after_signup/step_2', as: 'step_2'
+  post 'after_signup/save', as: 'save_profile'
+
   resources :contacts, only: :create
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: 'home#index'
   devise_for :users, path_names: { sign_in: "login", sign_out: "logout" }
   resources :users, only: :show
-  resources :after_signup
 
   get '/linkedin' => 'linkedin#index'
   get '/linkedin_profile' => 'linkedin#linkedin_profile'
