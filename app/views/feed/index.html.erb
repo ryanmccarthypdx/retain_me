@@ -2,7 +2,7 @@
 
 <%# create a new post %>
 <%= form_for News.new do |f| %>
-  <%= f.text_area :content, size: '100x4', required: true, placeholder: 'What did you do recently?' %>
+  <%= f.text_area :content, size: '80x4', required: true, placeholder: 'What did you do recently?' %>
   <%= f.submit 'Post' %>
 <% end %>
 
