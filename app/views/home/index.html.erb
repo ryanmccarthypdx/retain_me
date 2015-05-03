@@ -1,24 +1,5 @@
-
-<!DOCTYPE html>
-<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="compatible"> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>upmobility.co</title>
-    <meta name="description" content="">
-    <meta property="og:image" content="https://www.filepicker.io/api/file/kdwzChDHTS8zJC4AO856" />
-    <meta property="og:url" content="http://www.upmobility.co" />
-    <meta property="og:title" content="upmobility.co" />
-    <meta property="og:description" content="" />
-    <meta property="twitter:card" content="summary" />
-    <meta property="twitter:site" content="@upmobilityco" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='//fonts.googleapis.com/css?family=Lato:400,700,400italic|Playfair+Display:400,700,400italic|Great+Vibes|Open+Sans:400italic,700italic,700,400|Oswald|Old+Standard+TT:400,700,400italic|Quattrocento:700,400|Sansita+One|Bevan|Montserrat' rel='stylesheet' type='text/css'>
+<% content_for :head do %>
+    <link href='//fonts.googleapis.com/css?family=Lato:400,700,400italic|Playfair+Display:400,700,400italic|Great+Vibes|Open+Sans:400italic,700italic,700,400|Oswald|Old+Standard+TT:400,700,400italic|Quattrocento:700,400|Sansita+One|Bevan|Montserrat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="//pop-profiles.s3.amazonaws.com/builds/1429132067438/clean-slate/css/styles.min.css" />
     <style type="text/css">
     body {
@@ -207,8 +188,9 @@
   font-family: 'Open Sans', sans-serif !important;
 }
     </style>
-</head>
-<body class="font-bundle-oswald xpos-center ypos-top">
+<% end %>
+
+
     <!--[if lt IE 7]>
     <p class="browsehappy">
     You are using an <strong>outdated</strong> browser. Please
@@ -272,7 +254,7 @@
     <% end %>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript">
+    <script type="text/javascript">
     var StarterPage = StarterPage || {};
     StarterPage.settings = {
         application_url: 'http://profile-api.pop.co',
@@ -282,7 +264,3 @@
         coords: ""    };
     </script>
     <script type="text/javascript" src="//pop-profiles.s3.amazonaws.com/builds/1429132067438/clean-slate/js/script.min.js"></script>
-
-    </body>
-</html>
-
