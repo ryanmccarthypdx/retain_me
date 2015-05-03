@@ -9,35 +9,20 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'pg'
 gem 'rails_admin'
 gem 'puma'
 gem 'rails_12factor'
 gem 'cancan'
-
 gem 'dotenv'
-
 gem 'linkedin'
-
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
+gem 'bcrypt', '~> 3.1.7'
 
 group :development, :test do
   gem 'byebug'
   gem 'pry'
-
   gem 'web-console', '~> 2.0'
   gem 'rspec-rails'
-
   gem 'spring'
 end

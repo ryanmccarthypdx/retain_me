@@ -33,6 +33,12 @@ ActiveRecord::Schema.define(version: 20150502230059) do
     t.datetime "updated_at",         null: false
   end
 
+  create_table "contacts", force: :cascade do |t|
+    t.string   "email",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "educations", force: :cascade do |t|
     t.string   "school_name"
     t.string   "field_of_study"
