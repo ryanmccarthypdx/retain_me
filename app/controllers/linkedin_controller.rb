@@ -10,7 +10,9 @@ class LinkedinController < ApplicationController
 
   def index
     if LinkedinOauthSetting.find_by_user_id(current_user.id)
-      redirect_to "/me"
+      redirect_to "/feed"
+    else
+      redirect_to "/after_signup/step_0"
     end
   end
 
@@ -22,7 +24,6 @@ class LinkedinController < ApplicationController
   end
 
   def oauth_account
-
     client = LinkedIn::Client.new(ENV['LINKED_IN_CLIENT_ID'], ENV['LINKED_IN_CLIENT_SECRET'], @@config)
     pin = params[:oauth_verifier]
     if pin
