@@ -17,6 +17,10 @@
 body {
   padding-top: 50px;
 }
+
+.form-control, .user_email {
+  width: 30%;
+}
  
 ul li {
  list-style-type: none;
