@@ -1,14 +1,20 @@
-<div class="jumbotron">
-  <img class="logo" src="https://www.filepicker.io/api/file/kdwzChDHTS8zJC4AO856" alt="upmobility.co" />
-  <h1>upmobility.co</h1>
-  <p>Helping companies retain their diverse workforce &amp; empowering women to own their career development and advancement.</p>
+<div class="container">
+  <div class="jumbotron">
+    <img class="logo" src="https://www.filepicker.io/api/file/kdwzChDHTS8zJC4AO856" alt="upmobility.co" />
+    <h1>upmobility.co</h1>
+    <p>Helping companies retain their diverse workforce &amp; empowering women to own their career development and advancement.</p>
 
-<%= form_for Contact.new do |f| %>
-  <p style="color: green"><%= flash[:notice] %></p>
-  <%= f.text_field :email, maxlength: 64, size: 64, required: true, placeholder: 'Email Address' %>
-  <%= f.button "Tell me More" %>
-<% end %>
+  <%= form_for Contact.new do |f| %>
+    <p style="color: green"><%= flash[:notice] %></p>
+    <%= f.text_field :email, maxlength: 64, size: 64, required: true, placeholder: 'Email Address' %>
+    <%= f.button "Tell me More" %>
+  <% end %>
+    <span class="social pull-right">
+    <ul>
+    <li><a href="http://twitter.com/upmobilityco"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="https://facebook.com/upmobility"><i class="fa fa-facebook"></i></a></li>
+    </ul>
+  </span>
+  </div>
 </div>
 
-<a href="http://twitter.com/upmobilityco" title="Follow us on Twitter" class="symbol">circletwitterbird</a>
-<a href="https://facebook.com/upmobility" title="Like us on Facebook" class="symbol">circlefacebook</a>
