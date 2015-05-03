@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <%= image_tag @user.basic_profile.picture_url, size: '80x80' %>
+    </div>
+    <div class="col-md-3">
+      <h2><%= @user.basic_profile.formatted_name %></h2>
+      <p>
+        <%= @user.basic_profile.location %><br/>
+        <%= @user.basic_profile.industry %>
+      </p>
+      <p>
+        <%= link_to 'LinkedIn', @user.basic_profile.public_profile_url %>
+        <%= button_to "Connect with #{@user.basic_profile.first_name}" %>
+      </p>
+    </div>
+
+    <div class="col-md-7">
+      <h3>Professional</h3>
+      <p><%= @user.basic_profile.professional_brand_statement %></p>
+      <h3>Personal</h3>
+      <% if @user.basic_profile.passion %>
+        <p><strong>My passion is for...</strong><p>
+        <p><%= @user.basic_profile.passion %></p>
+      <% end %>
+      <% if @user.basic_profile.want_to_try %>
+        <p><strong>I've always wanted to try...</strong><p>
+        <p><%= @user.basic_profile.want_to_try %></p>
+      <% end %>
+      <% if @user.basic_profile.strengths %>
+        <p><strong>My strengths are...</strong><p>
+        <p><%= @user.basic_profile.strengths %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

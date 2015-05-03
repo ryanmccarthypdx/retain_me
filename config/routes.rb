@@ -14,7 +14,6 @@ Rails.application.routes.draw do
 
   get '/linkedin' => 'linkedin#index'
   get '/linkedin_profile' => 'linkedin#linkedin_profile'
-
   get '/oauth_callback' => "linkedin#oauth_account"
   get '/linkedin_oauth_url' => 'linkedin#generate_linkedin_oauth_url'
 end

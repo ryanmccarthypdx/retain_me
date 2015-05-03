@@ -16,7 +16,9 @@
   <div class="row panel panel-default">
     <div class="col-md-2">
       <h3><%= news.user.basic_profile.formatted_name %></h3>
-      <%= image_tag news.user.basic_profile.picture_url, size: '80x80', alt: 'pic', class: 'img-thumbnail' %>
+      <%= link_to user_path(news.user) do %>
+        <%= image_tag news.user.basic_profile.picture_url, size: '80x80', alt: 'pic', class: 'img-thumbnail' %>
+      <% end %>
     </div>
     <div class="col-md-9">
       <p><%= news.content %></p>
