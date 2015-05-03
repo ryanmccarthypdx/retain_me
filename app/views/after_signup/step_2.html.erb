@@ -1,16 +1,15 @@
 <h1>About Me</h1>
 
-<%= form_for @user_basic_profile do |f| %>
+<%= form_for current_user.basic_profile, url: step_2_save_path do |f| %>
   <%=  f.label :passion %>
-  <%= f.text_field :passion, class: 'form-control', required: true, %>
+  <%= f.text_area :passion %>
   <%=  f.label :want_to_try %>
-  <%= f.text_field :want_to_try, class: 'form-control', required: true, %>
+  <%= f.text_area :want_to_try %>
   <%=  f.label :perfect_weekend %>
-  <%= f.text_field :perfect_weekend, class: 'form-control', required: true, %>
+  <%= f.text_area :perfect_weekend %>
   <%=  f.label :strengths %>
-  <%= f.text_field :strengths, class: 'form-control', required: true, %>
+  <%= f.text_area :strengths %>
   <%=  f.label :next_year_goals %>
-  <%= f.text_field :next_year_goals, class: 'form-control', required: true, %>
+  <%= f.text_area :next_year_goals %>
+  <%= f.submit "Finish your profile!" %>
 <% end %>
-
-<h3><%= link_to "Done", save_profile_path %></h3>
