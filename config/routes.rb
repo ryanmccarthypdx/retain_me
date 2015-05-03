@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   get 'feed' => 'feed#index'
   get 'after_signup/step_0', as: 'step_0'
   get 'after_signup/step_1', as: 'step_1'
+  patch 'after_signup/step_1_save', as: 'step_1_save'
   get 'after_signup/step_2', as: 'step_2'
-  post 'after_signup/save', as: 'save_profile'
+  patch 'after_signup/step_2_save', as: 'step_2_save'
 
   resources :contacts, only: :create
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

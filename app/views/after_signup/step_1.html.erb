@@ -1,7 +1,7 @@
 <h1>My Professional Objectives</h1>
 
-<p>
-  Lorem ipsum
-</p>
-
-<h3><%= link_to "Next", step_2_path %></h3>
+<%= form_for current_user.basic_profile, url: step_1_save_path do |f| %>
+  <%= f.label :professional_brand_statement %>
+  <%= f.text_area :professional_brand_statement %>
+  <%= f.submit "Continue to step 2" %>
+<% end %>
