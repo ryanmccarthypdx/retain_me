@@ -6,15 +6,17 @@
 
   <%= form_for Contact.new do |f| %>
     <p style="color: green"><%= flash[:notice] %></p>
-    <%= f.text_field :email, maxlength: 64, size: 64, required: true, placeholder: 'Email Address' %>
-    <%= f.button "Tell me More" %>
+    <div class="form-group">
+      <%= f.text_field :email, maxlength: 64, size: 64, required: true, placeholder: 'Email Address', class: 'form-control' %>
+      <%= f.button "Tell me More" %>
+    <div>
   <% end %>
     <span class="social pull-right">
-    <ul>
-    <li><a href="https://twitter.com/upmobilityco"><i class="fa fa-twitter"></i></a></li>
-    <li><a href="https://facebook.com/upmobility"><i class="fa fa-facebook"></i></a></li>
-    </ul>
-  </span>
+      <ul>
+        <li><a href="https://twitter.com/upmobilityco"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://facebook.com/upmobility"><i class="fa fa-facebook"></i></a></li>
+      </ul>
+    </span>
   </div>
 </div>
 

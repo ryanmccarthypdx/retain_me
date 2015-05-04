@@ -2,10 +2,10 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-
+</br >
   <div class="form-group">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, class: "form-control", size: '40x4'  %>
+    <%= f.email_field :email, autofocus: true, class: "form-control"  %>
   </div>
 
   <div class="form-group">
